@@ -25,6 +25,7 @@ nav{
     background-color:transparent;
     width: 35em;
     margin-top: 0.3em;
+    color: white;
 }
 }
 .input{
@@ -83,7 +84,7 @@ nav{
     background-color: #d6d5d0;
     border: none;
     border-radius: 2px;
-    padding-bottom: 2.7em;
+    padding-bottom: 2.7em;g
 }
 .card img{
     padding-bottom:0.5em;
