@@ -43,9 +43,11 @@ button.onclick = function(){
                 if(i>=data.results.length){
                     var a=document.getElementsByClassName('container')[0].getElementsByTagName('img')[i];
                     var b=document.getElementsByClassName('container')[0].getElementsByTagName('h6')[i];
+                    var c=document.getElementById('out');
                     a.src="";
+                    b.innerHTML="";
                     if(i==0){
-                        b.innerHTML="no results found";
+                        b.innerHTML=" <h1>No results found </h1>";
                     }
                     continue;
                 }

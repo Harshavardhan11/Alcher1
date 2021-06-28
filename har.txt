@@ -1,0 +1,14 @@
+var search = document.getElementsByClassName('effect')[0];
+var movie = search.value;
+var btn = document.getElementsByClassName('btton')[0];
+console.log(btn);
+btn.onclick = function(){
+    fetch('https://api.themoviedb.org/3/movie/550?api_key=fb5abc74ace95b5c32f6db0d58b966eb&query=avenger')
+    .then(result=>result.json())
+    .then(data=>{
+        console.log(data);
+        var a=document.getElementsByClassName('container')[0].getElementsByTagName('img')[0];
+        console.log(a);
+        a.src="".concat('https://image.tmdb.org/t/p/w500',data.poster_path);
+    });
+};
