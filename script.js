@@ -1,7 +1,9 @@
 const APIKEY = "fb5abc74ace95b5c32f6db0d58b966eb";
 var button = document.getElementById('har');
+var search = document.getElementById('var');
 button.onclick = function(){
-    var movie = document.getElementById('var').value;
+    var search = document.getElementById('var');
+    var movie = search.value;
     console.log(movie);
 }
 
@@ -25,8 +27,17 @@ button.onclick = function(){
                 console.log(movie);
                 runSearch(movie);
             }
+            search.addEventListener('keyup', (e)=>{
+                if(e.keyCode === 13){
+                
+                    console.log(e.target.value);
+                    runSearch(e.target.value);
+                }
+                });
             
-        })
+            })
+            
+        
         .catch(function(err){
             alert(err);
         });

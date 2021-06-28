@@ -12,3 +12,9 @@ btn.onclick = function(){
         a.src="".concat('https://image.tmdb.org/t/p/w500',data.poster_path);
     });
 };
+search.addEventListener('keyup', (e)=>{
+                if(e.keyCode === 13){
+                    var movie = document.getElementById('var').value;
+                    console.log(movie);
+                    runSearch(movie);
+                }
